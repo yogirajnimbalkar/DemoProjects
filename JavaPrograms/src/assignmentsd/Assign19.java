@@ -36,6 +36,18 @@ public class Assign19 {
 		return minLengthStr;
 	}
 	
+	/* sum of all numbers in given statement.
+	input = "10 10 20 30";
+	output : 70 */
+	int getSumFromString(String str) {
+		int sum = 0;
+		String[] arr = str.split(" ");
+		for(int index=0; index<arr.length; index++) {
+			sum = sum + Integer.parseInt(arr[index]);
+		}
+		return sum;
+	}
+	
 	public static void main(String[] args) {
 		String input = "Him Hello hi science world";
 		Assign19 assign19 = new Assign19();
@@ -45,6 +57,8 @@ public class Assign19 {
 		System.out.println("--------------------------------------------");
 		System.out.println("Min length word : " + assign19.getMinLengthWord(input));
 		System.out.println("--------------------------------------------");
-	
+		String input1 = "10 10 20 30 40";
+		System.out.println("Sum of all numbers : " + assign19.getSumFromString(input1));
+		System.out.println("--------------------------------------------");
 	}
 }
